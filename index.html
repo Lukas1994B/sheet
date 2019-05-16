@@ -2,45 +2,138 @@
 <html lang="pl">
 <head>
 
-	<meta charset="utf-8">
-	<title>Katalog samochodowy</title>
-	<meta name="description" content="Stwórz wymarzony model swojego samochodu!">
-	<meta name="keywords" content="samochód, katalog, salon, nowe auto">
-	<meta name="author" content="Jan Nowak">
-	
-	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
-	
-	<link rel="stylesheet" href="main.css">
+    <meta charset="utf-8">
+    <title>Katalog samochodowy</title>
+    <meta name="description" content="Stwórz wymarzony model swojego samochodu!">
+    <meta name="keywords" content="samochód, katalog, salon, nowe auto">
+    <meta name="author" content="Jan Nowak">
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
-	
-	<!--[if lt IE 9]>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<![endif]-->
-	
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="main.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
 </head>
 
 <body>
 
-	<header>
-	
-		<h1>Wybierz konfigurację samochodu</h1>
+<header>
 
-	</header>
-	
-	<main>
-	
-		<article>
-		
-			<form>
+    <h1>Wybierz konfigurację samochodu</h1>
 
-			
+</header>
 
-			</form>		
-			
-		</article>
-		
-	</main>
+<main>
+
+    <article>
+
+        <form action="order.html" method="post">
+
+
+            <div class="row">
+
+                <fieldset>
+
+                    <legend> Rodzaje nadwozia</legend>
+
+                    <!--<input type="radio" id="nadwozie"><label for="nadwozie">Hatchback</label>-->
+                    <div><label><input type="radio" name="nadwozie" checked>Hatchback</label></div>
+                    <div><label><input type="radio" name="nadwozie">Kombi</label></div>
+                    <div><label><input type="radio" name="nadwozie">Kabriolet</label></div>
+
+                </fieldset>
+
+            </div>
+
+            <div class="row">
+                <label for="silnik">Rodzaj silnika</label>
+                <select id="silnik">
+
+                    <option>Wysokoprężny</option>
+                    <option selected>Elektryczny</option>
+                    <option>Hybrydowy</option>
+                    <option>Benzynowy</option>
+
+                </select>
+
+            </div>
+
+            <div class="row">
+
+                <fieldset>
+
+                    <legend>Wyposażenie samochodu</legend>
+                    <div class="col">
+                        <div><label><input type="checkbox" disabled checked>klimatyzacja</label></div>
+                        <div><label><input type="checkbox" disabled checked>Abs</label></div>
+                        <div><label><input type="checkbox">radio</label></div>
+                        <div><label><input type="checkbox">usb</label></div>
+                    </div>
+                    <div class="col">
+                        <div><label><input type="checkbox">tapicerka skórzana</label></div>
+                        <div><label><input type="checkbox">szyberdach</label></div>
+                        <div><label><input type="checkbox">zamek centralny</label></div>
+                        <div><label><input type="checkbox">5-drzwiowe</label></div>
+                    </div>
+                    <div class="col">
+                        <div><label><input type="checkbox">zielone</label></div>
+                        <div><label><input type="checkbox">czerwone</label></div>
+                        <div><label><input type="checkbox">kawa</label></div>
+                        <div><label><input type="checkbox">herbata</label></div>
+                    </div>
+                </fieldset>
+
+
+            </div>
+
+
+            <div class="row">
+                <label for="choinka">Jakie choinki zapachowe</label>
+                <div style="margin-top: 10px;">
+                <select id="choinka" multiple size="4">
+
+                    <option>kokosowy</option>
+                    <option selected>cytrynowa</option>
+                    <option>truskawkowa</option>
+                    <option>malinowa</option>
+
+                </select>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <label> Podaj imie<input type="text" placeholder="Jak masz na imię?"></label>
+                <label> Hasło<input type="password" placeholder="Podaj hasło"></label>
+                <label> Szukaj<input type="search"></label>
+
+
+            </div>
+
+            <div class="row">
+
+                <label> Ile kluczyków <input type="number" step="1"></label>
+            </div>
+
+            <div class="row">
+
+                <input type="submit" value="Zamawiam">
+                <input type="button" value="Anuluj">
+                <!--<button>Zamawiam!</button>-->
+
+            </div>
+
+
+        </form>
+
+    </article>
+
+</main>
 
 </body>
 </html>
